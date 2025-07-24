@@ -1,0 +1,10 @@
+services:
+- type: web
+    name: flask-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    runtime: python-3.10.13
+    requirements: requirements.txt
+    ports:
+    - "5000:5000"
